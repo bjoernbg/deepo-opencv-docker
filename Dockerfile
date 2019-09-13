@@ -1,6 +1,6 @@
 FROM paperspace/tensorflow-python:latest
 
-RUN $PIP_INSTALL \
+RUN python -m pip --no-cache-dir install --upgrade \
         numpy \
         scipy \
         pandas \
