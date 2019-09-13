@@ -9,5 +9,6 @@ RUN python -m pip --no-cache-dir install --upgrade \
         matplotlib \
         Cython \
         tensorflow \
+        tensorflow-gpu \
         opencv-python \
         image
