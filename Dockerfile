@@ -4,7 +4,8 @@ FROM tensorflow/tensorflow:1.13.2-gpu-py3
 
 #RUN ${PIP} install ${TF_PACKAGE}${TF_PACKAGE_VERSION:+==${TF_PACKAGE_VERSION}}
 
-RUN ${PIP} --no-cache-dir install --upgrade \
+RUN echo ${PIP}
+RUN ${PIP} install --upgrade \
         numpy \
         scipy \
         pandas \
