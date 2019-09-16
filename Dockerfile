@@ -1,6 +1,10 @@
-FROM paperspace/tensorflow-python:latest
+# Copied from here: https://github.com/Paperspace/tensorflow-python/blob/master/Dockerfile
 
-RUN python -m pip --no-cache-dir install --upgrade \
+FROM tensorflow/tensorflow:1.13.2-gpu-py3
+
+#RUN ${PIP} install ${TF_PACKAGE}${TF_PACKAGE_VERSION:+==${TF_PACKAGE_VERSION}}
+
+RUN ${PIP} --no-cache-dir install --upgrade \
         numpy \
         scipy \
         pandas \
@@ -8,7 +12,5 @@ RUN python -m pip --no-cache-dir install --upgrade \
         scikit-learn \
         matplotlib \
         Cython \
-        tensorflow \
-        tensorflow-gpu \
         opencv-python \
         image
